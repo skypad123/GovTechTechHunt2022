@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 test = {
     'id': 1,
-    'names': []
+    'names': {}
 }
 
 @app.route("/")
@@ -51,6 +51,8 @@ def one():
 
     output = {"message": "Input Received", "next": "http://localhost:5000/two"}
     return output
+
+
 
 def get_database():
     # Provide the mongodb atlas url to connect python to mongodb using pymongo
