@@ -6,5 +6,14 @@ app = Flask(__name__)
 def hello_world():
     return "<p>Hello, World!</p>"
 
+
+@app.route('/one', methods = ['POST'])
+def one():
+    # CODE
+
+@app.route('/two', methods = ['POST'])
+def two():
+    # CODE    
+
 if __name__ == '__main__':
     app.run()
