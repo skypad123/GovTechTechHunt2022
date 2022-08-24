@@ -26,8 +26,8 @@ class EntryInput:
         this.breakdownDict = breakdownDict
         this.isDone = done
 
-def processQ2(input: str) -> (str, str):
-    val entry = parseEntryInput(input)
+def processQ2(input: str):
+    entry = parseEntryInput(input)
     if entry is None:
         return ("Validation ERROR!", "")
     else:
