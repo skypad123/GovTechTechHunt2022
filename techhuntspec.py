@@ -16,13 +16,13 @@ endpoint(str)
 
     enter foodName, price, done, split and done:
 '''
-class EntryInput (
-    def __init__(self, itemName: str, breakdown: dict<string, double>, done: bool):
+class EntryInput:
+    def __init__(self, itemName: str, breakdown: dict<str, double>, done: bool):
         this.itemName = itemName
         this.breakdown = breakdown
         this.isDone = done
 
-)
+
 
 def parseEntryInput(input: str) -> EntryInput
 
