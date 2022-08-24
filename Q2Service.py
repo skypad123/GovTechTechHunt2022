@@ -16,12 +16,26 @@ endpoint(str)
 
     enter foodName, price, done, split and done:
 '''
+from techhuntspec import fetchTotalBreakdown
+
+q2Url = ""
+
 class EntryInput:
     def __init__(self, itemName: str, breakdownDict, done: bool):
         this.itemName = itemName
         this.breakdownDict = breakdownDict
         this.isDone = done
 
+def processQ2(input: str) -> (str, str):
+    val entry = parseEntryInput(input)
+    if entry is None:
+        return ("Validation ERROR!", "")
+    else:
+        updatePriceBreakdown(entry)
+        if entry.done:
+            return fetchTotalBreakdown()
+        else:
+            return ("Enter next item", q2Url)
 
 
 def parseEntryInput(input: str) -> Optional[EntryInput]:
@@ -49,7 +63,8 @@ def getPriceBreakdown(names, price):
 
 def updatePriceBreakdown(entry: EntryInput):
 
-def fetchTotalBreakdown(mongoDB):
+
+def fetchTotalBreakdown():
 
 
 
