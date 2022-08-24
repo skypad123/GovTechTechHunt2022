@@ -63,5 +63,6 @@ def get_database():
     # Create the database for our example (we will use the same database throughout the tutorial
     return client['govtech']
 
+
 if __name__ == '__main__':
     app.run()
