@@ -17,8 +17,8 @@ endpoint(str)
     enter foodName, price, done, split and done:
 '''
 from techhuntspec import fetchTotalBreakdown
-
-q2Url = ""
+mockMongo = dict()
+q2Url = "localhost:5000/question2"
 
 class EntryInput:
     def __init__(self, itemName: str, breakdownDict, done: bool):
@@ -61,10 +61,21 @@ def getPriceBreakdown(names, price):
         breakdown[i] = splitPrice
     return breakdown
 
-def updatePriceBreakdown(entry: EntryInput):
 
+def updatePriceBreakdown(entry: EntryInput):
+    for i in entry.breakdownDict:
+        value = breakdownDict[i]
+        if i in mockMongo:
+            mockMongo[i] += value
+        else:
+            mockMongo = i 
+    
 
 def fetchTotalBreakdown():
+    return mockMongo
+
+
+
 
 
 
