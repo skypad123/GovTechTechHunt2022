@@ -10,10 +10,12 @@ def hello_world():
 @app.route('/one', methods = ['POST'])
 def one():
     # CODE
+    return None
 
 @app.route('/two', methods = ['POST'])
 def two():
-    # CODE    
+    # CODE
+    return None
 
 if __name__ == '__main__':
     app.run()
